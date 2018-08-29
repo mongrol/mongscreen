@@ -1,0 +1,11 @@
+# HTTP Cookie File
+# http://www.netscape.com/newsref/std/cookie_spec.html
+# This is a generated file!  Do not edit.
+# To delete cookies, use the Cookie Manager.
+
+.doubleclick.net	TRUE	/	FALSE	1138216209	id	8000001fd00478b
+.ftse.com	TRUE	/	FALSE	1076782002	FTSENG	oz@scorch.net
+.hemscott.net	TRUE	/	FALSE	1075075197	HSNETUSERID	TRIAL
+.hemscott.net	TRUE	/	FALSE	1075075197	TRIALREGISTER	516271
+.questionmarket.com	TRUE	/	FALSE	1079608322	AS1	2196544-7774266-1043608190-1-1043608190_
+.www.mozillazine.org	TRUE	/	FALSE	1072985343	phpbb2mysql_data	s%3A0%3A%22%22%3B

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<body bgcolor="#D8FfF0">
+
+<form method="post" action="results.php"> 
+
+<table width="640" border="1" cellspacing="0" align="center" bordercolorlight="#D8FFF0" bordercolordark="#D8FFF0" bgcolor="#C8EFE0">
+<tr><td><p>
+<div align="center"><font size="+2"><strong><br>Mongscreen v0.1</strong></font></div>
+<br></td></tr>
+<tr><td>
+<table cellspacing="2" align="center">
+<tr>
+<td><input type="text" size="40" name="searchstring" ></td>
+<td><select size="1" name="searchtype">
+<option selected value="EPIC">Epic</option>
+<option value="name">Name</option>
+<option value="sector">Sector</option>
+</select></td>
+<td><input type="Submit" name="submit" value="Go"></td>
+</tr>
+</table>
+</td></td>
+<tr><td>
+<table width="100%">
+<tr align="center">
+<th>Greater than</th><th></th><th>Less than</th><th>Show</th>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="Capgreater" size="2"></td><td>Market Cap</td><td><INPUT TYPE="text" NAME="Capless" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="Cap" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="PEgreater" size="2"></td><td>Historic PE</td><td><INPUT TYPE="text" NAME="PEless" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="PE" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="ProsPEgreater" size="2"></td><td>Prospective PE</td><td><INPUT TYPE="text" NAME="ProsPEless" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="ProsPE" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="DividendCovergreater" size="2"></td><td>Historic Yield</td><td><INPUT TYPE="text" NAME="yieldless" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="yield" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="DividendCovergreater" size="2"></td><td>Dividend Cover</td><td><INPUT TYPE="text" NAME="divcoverless" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="DividendCover" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="growth1greater" size="2"></td><td>Growth % Year 1</td><td><INPUT TYPE="text" NAME="growth1less" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="EPSGrowth1" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="growth2greater" size="2"></td><td>Growth % Year 2</td><td><INPUT TYPE="text" NAME="growth2less" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="EPSGrowth2" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="PEGgreater" size="2"></td><td>PEG Ratio</td><td><INPUT TYPE="text" NAME="PEGless" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="PEG" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="Gearinggreater" size="2"></td><td>Gearing</td><td><INPUT TYPE="text" NAME="Gearingless" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="Gearing" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="PTBVgreater" size="2"></td><td>PTBV</td><td><INPUT TYPE="text" NAME="PTBVless" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="PTBV" CHECKED></TD>
+</tr>
+<tr align="center">
+<td><INPUT TYPE="text" NAME="PBVgreater" size="2"></td><td>PBV</td><td><INPUT TYPE="text" NAME="PBVless" size="2"></td><TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="PBV" CHECKED></TD>
+</tr>
+
+</table>
+</td></tr>
+
+<tr><td>
+<table border="0">
+<TH colspan="2">Extra fields to show.</th>
+<TR>
+	<TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="NormEPS"></TD>
+	<TD>Normalised EPS</TD>
+	
+</TR>
+<TR>
+	<TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="ConsensusEPS1"></TD>
+	<TD>Prospective EPS Year 1</TD>
+</TR>
+<TR>
+	<TD><INPUT TYPE="checkbox" NAME="show[]" VALUE="ConsensusEPS2"></TD>
+	<TD>Prospective EPS Year 2</TD>
+</TR>
+<TR>
+	<TD>
+	<SELECT NAME="order">
+		<OPTION>EPIC
+		<OPTION>Sector
+		<OPTION>Cap
+		<OPTION>PE
+		<OPTION SELECTED>ProsPE
+		<OPTION>yield
+		<OPTION>DividendCover
+		<OPTION>EPSGrowth1
+		<OPTION>EPSGrowth2
+		<OPTION>PEG
+		<OPTION>Gearing
+		<OPTION>PBV
+		<OPTION>PTBV	
+	</SELECT>
+	</TD>
+	<TD>Order By</TD>
+	<TD>
+	<SELECT NAME="rows">
+		<OPTION>
+		<OPTION>10
+		<OPTION>30
+		<OPTION>50
+		<OPTION>100
+		<OPTION>500
+		<OPTION>1000
+		<OPTION>5000
+	</SELECT>
+	</TD>
+	<TD>
+	Results per page
+	</TD>
+</TR>
+</TABLE>
+</td></tr>
+
+<tr><td>
+<TABLE border="0">
+<TR>
+	<TD><HR><B>Status:</B> Isn't it amazing how you can write new bits of code, enhance features and develop new functionality? Isn`t it great how you can forget to upload your new code so noone ever sees the new features you've just released? The new code is now up so the previously announced dividend cover stuff is now working as it should. Yield filter is also fixed.<HR></TD>
+</TR>
+</TABLE>
+</td></tr>
+
+<tr><td>
+<TABLE border="0">
+<TR>
+	<TD><B>Notes:</B> Ratios and prices are updated at midnight. Fundamental data is updated weekly at midnight on Saturday. This site is hosted on a contended link and as such performance is not guaranteed. Overuse will result in services being restricted.<br><br>
+	Tip: You can enter column names instead of a number eg: "Cash" in the Greater than Cap box.</TD>
+</TR>
+</TABLE>
+</td></tr>
+
+<tr><td>
+<TABLE border="0">
+<TR>
+	<TD><A HREF="contact.html">Feedback</A> and suggestions are welcome.</TD>
+</TR>
+</TABLE>
+</td>
+</tr>
+
+<tr><td>
+<TABLE border="0">
+<TR>
+	<TD><HR><B>Disclaimer: The author holds no responsibility as to the accuracy of the data presented through this website. Any use of the data is at the viewers own discretion.</B></TD>
+</TR>
+</TABLE>
+</td></tr>
+
+</table>
+</form> 
+</BODY>
+</HTML>
